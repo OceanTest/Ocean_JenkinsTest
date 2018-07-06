@@ -1,5 +1,6 @@
 def testnode1 = env.testnode1
 def testnode2 = env.testnode2
+def Nodelist = [testnode1, testnode2]
 
 node('slave1'){
     // Mark the code checkout 'stage'....
@@ -10,8 +11,7 @@ node('slave1'){
     }  
     stage('GetParameter'){
     // Run the program
-        println "testnode1 is ${testnode1}"
-        println "testnode2 is ${testnode2}"
+        Nodelist.each{Node -> println "\r\n Test node is " Node}
     }
     // Mark the code run 'stage'....
     stage('Run'){
