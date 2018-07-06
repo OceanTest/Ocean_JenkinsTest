@@ -10,9 +10,14 @@ node('slave1'){
         
     }
     // Mark the code GetParameter 'stage'....
-    stage('GetParameter'){
+    stage('GetParameterviaEnvironment'){
     // Run the program
         Nodelist.each{Node -> println "\r\n Test node is " + Node}
+    }
+    
+    stage('GetParameterwithBuild'){
+        // Script //        
+        echo "${params.Greeting} World!"          
     }
     // Mark the code Run 'stage'....
     stage('Run'){
