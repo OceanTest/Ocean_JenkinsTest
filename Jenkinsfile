@@ -8,6 +8,6 @@ node('slave1'){
     // Mark the code run 'stage'....
     stage('Run'){
     // Run the program
-    sh script:"ssh root@10.25.132.123 'cd /home/workspace;python3 test.py'"
+    sh script:"ssh root@10.25.132.123 'cd /home/workspace;python3 ocean.py'"
     }
 }
