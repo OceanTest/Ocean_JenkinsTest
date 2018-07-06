@@ -12,7 +12,7 @@ node('slave1'){
     // Mark the code GetParameter 'stage'....
     stage('GetParameter'){
     // Run the program
-        Nodelist.each{Node -> println "\r\n Test node is " Node}
+        Nodelist.each{Node -> println "\r\n Test node is " + Node}
     }
     // Mark the code Run 'stage'....
     stage('Run'){
