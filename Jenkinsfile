@@ -22,6 +22,6 @@ node('slave1'){
     // Mark the code Run 'stage'....
     stage('Run'){
         // Run the program
-        sh script:"ssh root@10.25.132.123 'cd /home/workspace;python3 ocean.py'"
+        sh script:"ssh root@10.18.134.106 'cd /home/ocean/ReadRetryCount;python rdrery_test.py'"
     }
 }
